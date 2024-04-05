@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        // General
+        "eamodio.gitlens",
+        "editorconfig.editorconfig",
+        "GitHub.copilot",
+        "GitHub.copilot-chat",
+        "kokakiwi.vscode-just",
+        "ms-ceintl.vscode-language-pack-zh-hans",
+        "pkief.material-icon-theme",
+        "shd101wyy.markdown-preview-enhanced",
+        "TheNuProjectContributors.vscode-nushell-lang",
+        "yzhang.markdown-all-in-one",
+        "vscodevim.vim",
+        // Special
+        "tboby.cwtools-vscode",
+        "tboby.paradox-syntax",
+    ]
+}

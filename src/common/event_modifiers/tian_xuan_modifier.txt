@@ -1,0 +1,68 @@
+# https://eu4cn.com/wiki/修正列表
+
+# 天选：宫廷
+tian_xuan_1_modifier = {
+#	monarch_lifespan = 10000.00			# 君主寿命
+	country_admin_power = 49			# 行政
+	country_diplomatic_power = 49		# 外交
+	country_military_power = 49			# 军事
+}
+
+# 天选：政府
+tian_xuan_2_modifier = {
+	num_accepted_cultures = 361			# 可认同文化上限
+}
+
+# 天选：外交
+tian_xuan_3_modifier = {
+	envoy_travel_time = -0.99			# 使者移动速度
+}
+
+# 天选：经济
+tian_xuan_4_modifier = {
+	build_time = -0.99					# 建筑时间
+}
+
+# 天选：科技
+tian_xuan_6_modifier = {
+	technology_cost = -100.00			# 科技花费（-1000年）
+}
+
+# 天选：稳定和扩张
+tian_xuan_10_modifier = {
+	administrative_efficiency = 0.90	# 行政效率
+
+	governing_capacity = 1000000		# 行政容量
+#	expand_administration_cost = -0.99	# 扩容成本
+#	governing_cost = -0.99				# 治理成本（省份占有的行政容量）
+	core_creation = -0.99				# 建核成本
+
+#	colonists = 3						# 殖民队
+	global_colonial_growth = 12000		# 殖民人口增长
+	colonist_placement_chance = 1.00	# 殖民定居概率
+}
+
+# 天选：宗教
+tian_xuan_11_modifier = {
+	harmonization_speed = 49.00			# 和谐宗教速度
+}
+
+# 天选：军事
+tian_xuan_12_modifier = {
+	free_leader_pool = 108				# 无需军事点数维护的陆军、海军将领
+	leader_land_fire = 18				# 陆军将领火力
+	leader_land_shock = 18				# 陆军将领冲击
+	leader_land_manuever = 18			# 陆军将领机动
+	leader_naval_fire = 18				# 海军将领火力
+	leader_naval_shock = 18				# 海军将领冲击
+	leader_naval_manuever = 18			# 海军将领机动
+	leader_siege = 18					# 陆军将领围攻、海军将领封锁
+
+	land_morale = 6.00					# 陆军士气修正
+	recover_army_morale_speed = 6.00	# 陆军士气恢复修正
+	naval_morale = 6.00					# 海军士气修正
+	recover_navy_morale_speed = 6.00	# 海军士气恢复修正
+
+	movement_speed = 7.00							# 军队移动速度
+	movement_speed_onto_off_boat_modifier = 7.00	# 军队登录速度
+}

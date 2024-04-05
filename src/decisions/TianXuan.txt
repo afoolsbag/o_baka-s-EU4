@@ -1,0 +1,78 @@
+country_decisions = {																# 国家决议
+
+	zhao_zhao_tian_ming = {															# 昭昭天命
+		major = yes
+		potential = {																# 潜在条件
+			ai = no																	# 不是 AI
+			NOT = { has_country_flag = tian_xuan_flag }								# 没有“天选”
+		}
+		effect = {																	# 效果
+			set_country_flag = tian_xuan_flag										# 使国家拥有“天选”
+			add_country_modifier = { name = tian_xuan_1_modifier  duration = -1 }
+			add_country_modifier = { name = tian_xuan_2_modifier  duration = -1 }
+			add_country_modifier = { name = tian_xuan_3_modifier  duration = -1 }
+			add_country_modifier = { name = tian_xuan_4_modifier  duration = -1 }
+			add_country_modifier = { name = tian_xuan_6_modifier  duration = -1 }
+			add_country_modifier = { name = tian_xuan_10_modifier duration = -1 }
+			add_country_modifier = { name = tian_xuan_11_modifier duration = -1 }
+			add_country_modifier = { name = tian_xuan_12_modifier duration = -1 }
+		}
+		ai_will_do = {																# AI 策略
+			factor = 0																# 禁用
+		}
+	}
+
+	ni_tian_kang_ming = {															# 逆天抗命
+		major = yes
+		potential = {																# 潜在条件
+			has_country_flag = tian_xuan_flag										# 拥有“天选”
+		}
+		effect = {																	# 效果
+			clr_country_flag = tian_xuan_flag										# 使国家失去“天选”
+			remove_country_modifier = tian_xuan_1_modifier
+			remove_country_modifier = tian_xuan_2_modifier
+			remove_country_modifier = tian_xuan_3_modifier
+			remove_country_modifier = tian_xuan_4_modifier
+			remove_country_modifier = tian_xuan_6_modifier
+			remove_country_modifier = tian_xuan_10_modifier
+			remove_country_modifier = tian_xuan_11_modifier
+			remove_country_modifier = tian_xuan_12_modifier
+		}
+	}
+
+	si_she = {																		# 祀社
+		potential = {																# 潜在条件
+			has_country_flag = tian_xuan_flag										# 拥有“天选”
+		}
+		allow = {																	# 前提条件
+			any_owned_province = {													# 若拥有的核心省份中，存在税收、生产或人力不足 33 点的省份
+				is_core = owner
+				NOT = {
+					AND = {
+						base_tax = 33
+						base_production = 33
+						base_manpower = 33
+					}
+				}
+			}
+		}
+		effect = {																	# 效果
+			every_owned_province = {												# 使拥有的核心省份中，税收、生产或人力不足 33 点的，对应地增加 33 点
+				limit = { is_core = owner }
+				if = {
+					limit = { NOT = { base_tax = 33 } }
+					add_base_tax = 33
+				}
+				if = {
+					limit = { NOT = { base_production = 33 } }
+					add_base_production = 33
+				}
+				if = {
+					limit = { NOT = { base_manpower = 33 } }
+					add_base_manpower = 33
+				}
+			}
+		}
+	}
+
+}
